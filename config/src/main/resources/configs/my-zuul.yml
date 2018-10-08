@@ -1,0 +1,20 @@
+env:
+  name: dev
+zuul:
+  prefix: /api
+  routes:
+    demo1:
+      path: /d1/**
+      service-id: demo1
+    demo2:
+      path: /d2/**
+      service-id: demo2
+    baidu:
+      path: /baidu/**
+      stripPrefix: true
+      url: http://www.baidu.com/
+#      add-host-header: true
+      
+
+
+

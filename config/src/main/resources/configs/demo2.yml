@@ -1,0 +1,12 @@
+## 运行环境
+env:
+  name: dev
+
+message: 我是demo2
+
+## zipkin调用链监控服务配置
+spring:
+  zipkin:
+    base-url: http://localhost:1015
+
+

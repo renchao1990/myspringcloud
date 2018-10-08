@@ -1,0 +1,25 @@
+server:
+  port: 1012
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: ${spring.cloud.client.ip-address}
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:1010/eureka/
+
+spring:
+  application:
+    name: my-zuul
+  cloud:
+    config:
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: my-config
+
+
